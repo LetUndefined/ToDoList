@@ -3,7 +3,28 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "DynaPuff";
-  background-color: rgb(201, 128, 194);
+  transition: 0.2s ease-in-out;
+}
+
+body {
+  background: rgb(8, 8, 75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.todo-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.585);
 }
 
 .container-title {
@@ -14,7 +35,8 @@
 }
 
 #title {
-  color: rgb(0, 170, 255);
+  font-size: 40px;
+  color: rgb(255, 162, 0);
   text-shadow: 1px 1px 1px black;
 }
 
@@ -33,28 +55,37 @@ form {
   flex-direction: column;
 }
 
-input {
-  padding: 0.25rem 0.5rem;
+#input-field {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
   margin-right: 1rem;
-  border-radius: 10px;
-  border: 0.5px solid black;
-  border: 1px solid rgb(0, 170, 255);
-  outline: none;
+  border-radius: 30px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 14px;
 }
 
-button {
-  padding: 0.25rem 0.5rem;
-  border-radius: 10px;
+#input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 24, 91, 0.2);
+}
+
+#addTodo {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
   border: 0.5px solid black;
   cursor: pointer;
-  background-color: rgb(0, 170, 255);
-  transition: 0.2s ease-in-out;
+  background-color: rgb(255, 162, 0);
+}
+
+#addTodo:hover {
+  color: white;
 }
 
 li {
   width: 200px;
   height: 100%;
-  background-color: rgb(0, 170, 255);
+  background-color: rgb(255, 162, 0);
   border-radius: 10px;
   margin-top: 0.5rem;
   display: flex;
@@ -66,10 +97,14 @@ li {
 
 li button {
   margin-left: 1rem;
+  background-color: transparent;
+  padding: 0.25rem;
+  border: none;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: rgb(255, 255, 255);
+li button:hover {
+  color: white;
 }
 
 li p {
